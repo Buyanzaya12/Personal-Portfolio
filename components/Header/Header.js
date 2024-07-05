@@ -6,7 +6,7 @@ export function Header() {
             <div className="">Work</div>
             <div className="">Contact</div>
             <div class="ml-2"><HiSun /></div>
-            <div class=" bg-white text-black p-1 rounded-lg">Download CV</div>
+            <div class="bg-white text-black p-1 rounded-lg">Download CV</div>
         </nav>
     </div>;
 }
