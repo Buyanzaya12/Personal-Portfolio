@@ -10,3 +10,4 @@ export function Header() {
         </nav>
     </div>;
 }
+export default Header;
