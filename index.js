@@ -10,7 +10,7 @@ import { Footer } from "@/components/Footer/Footer";
 
 export default function Home() {
   return (
-  <main class="bg-gradient-to-l from-cyan-300 to-red-400 min-h-screen w-360">
+  <main class="bg-slate-950 min-h-screen w-360">
     <Header />
     <Hero />
     <About />
