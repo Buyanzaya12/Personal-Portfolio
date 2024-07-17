@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function SkillItem({ src, width, height, label }) {
     return (
-        <div className="items-center">
+        <div className="flex flex-col items-center text-lg mt-4">
             <div style={{ marginBottom: '8px' }}>
                 <Image src={src} width={width} height={height} alt={label} />
             </div>
@@ -13,10 +13,10 @@ function SkillItem({ src, width, height, label }) {
 
 export function Skills() {
     return (
-        <div>
-            <div className="bg-gray-700 text-sm p-1 rounded-xl w-[75px] m-auto text-center">Skills</div>
+        <div className=" flex flex-col justify-around px-28">
+            <div className="bg-gray-700 text-sm rounded-xl w-[75px] m-auto text-center">Skills</div>
             <div className="text-center">The skills, tools, and technologies I am really good at:</div>
-            <div className="grid grid-cols-8 gap-4 max-w-[1216px] mx-auto mt-4">
+            <div className="grid grid-cols-8">
                 <SkillItem src="/PP-pics/icon-javscript.svg" width={64} height={64} label="JavaScript" />
                 <SkillItem src="/PP-pics/icon-typescript.svg" width={64} height={64} label="TypeScript" />
                 <SkillItem src="/PP-pics/icon-react.svg" width={70} height={64} label="React" />
@@ -27,7 +27,7 @@ export function Skills() {
                 <SkillItem src="/PP-pics/icon-socket.svg" width={64} height={64} label="Socket.io" />
             </div>
             
-            <div className="grid grid-cols-8 gap-4 max-w-[1216px] mx-auto mt-4">
+            <div className="grid grid-cols-8">
                 <SkillItem src="/PP-pics/icon-postgresql.svg" width={62} height={64} label="PostgreSQL" />
                 <SkillItem src="/PP-pics/icon-mongodb.svg" width={30} height={64} label="MongoDB" />
                 <SkillItem src="/PP-pics/icon-sass.svg" width={64} height={64} label="Sass/Scss" />

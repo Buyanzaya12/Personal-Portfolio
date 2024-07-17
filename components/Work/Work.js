@@ -22,7 +22,7 @@ const works = [
 
 export function Work() {
     return (
-        <div className="m-auto justify-center py-5">
+        <div className="m-auto justify-center py-5  px-[144px]">
             <div className="bg-gray-700 text-sm p-1 rounded-xl w-[115px] m-auto text-center">Work</div>
             <div className="text-center">Some of the noteworthy projects I have built:</div>
     
@@ -30,8 +30,6 @@ export function Work() {
                 <div key={index}>
                     <WorkCard
                         title={work.title}
-                        startDate={work.startDate}
-                        endDate={work.endDate}
                         listItems={work.listItems}
                     />
                 </div>
