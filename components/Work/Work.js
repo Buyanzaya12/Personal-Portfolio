@@ -1,39 +1,68 @@
+import Image from "next/image";
 
-import WorkCard from './WorkCard';
 
 const works = [
     {
-        title: "Example 1",
-        listItems: ["item 1", "item 2", "item 3"],
+        title: "Fiskil",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
+        tags: ["React", "Next.js", "Typescript", "Nest.js","PostgreSQL", "Tailwindcss", "Figma", "Cypress", "Storybook", "Git"],
+        link: "/"
 
     },
     {
-        
-        listItems: ["item 4", "item 5", "item 6"],
-        title: "Example 2",
-     
+        title: "Fiskil",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
+        tags: ["React", "Next.js", "Typescript", "Nest.js","PostgreSQL", "Tailwindcss", "Figma", "Cypress", "Storybook", "Git"],
+        link: "/"
     },
     {
-        title: "Example 3",
-        listItems: ["item 7", "item 8", "item 9"],
- 
+        title: "Fiskil",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
+        tags: ["React", "Next.js", "Typescript", "Nest.js","PostgreSQL", "Tailwindcss", "Figma", "Cypress", "Storybook", "Git"],
+        link: "/"
     }
 ];
 
 export function Work() {
     return (
-        <div className="m-auto justify-center py-5  px-[144px]">
-            <div className="bg-gray-700 text-sm p-1 rounded-xl w-[115px] m-auto text-center">Work</div>
-            <div className="text-center">Some of the noteworthy projects I have built:</div>
+        <div className="mx-auto max-w-6xl rounded-lg">
+            <div className="flex justify-center">
+                <Tag name="Work" />
+            </div>
+            <div className="mb-10 text-center">Some of the noteworthy projects I have built:</div>
     
+           
             {works.map((work, index) => (
-                <div key={index}>
-                    <WorkCard
-                        title={work.title}
-                        listItems={work.listItems}
-                    />
-                </div>
+                    <WorkCard key={work.title} work={work} isReverse={index % 2 === 1} />
+               
             ))}
+            
         </div>
     );
+}
+function WorkCard ({ isReverse = false, work }) {
+    return (
+        <div className={`mb-4 shadow md:flex ${isReverse ? "md:flex-row-reverse" : ""}`}>
+            <div className="md:flex-1 bg-gray-700 p-12">
+            <Image src="/PP-pics/Fiskil-project.jpg" width={480} height={384} className="w-full rounded-lg shadow" />
+            </div>
+            <div className="md:flex-1 bg-gray-900 p-12">
+                <div className="mb-2 font-bold">{work.title}</div>
+                <div className="mb-2">{work.desc}</div>
+                <div className="flex flex-wrap gap-2">
+                {work.tags.map((tag) => (
+                    <Tag key={tag} name={tag} />
+                ))}
+                
+            </div>
+            <Image src="/PP-pics/go-to.svg" width={24} height={24}/>
+            </div>
+        </div>
+    );
+
+}
+
+
+function Tag({ name }) {
+    return <div className="px-4 rounded-xl bg-gray-700">{name}</div>
 }

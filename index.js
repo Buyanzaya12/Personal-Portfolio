@@ -10,7 +10,7 @@ import { Footer } from "@/components/Footer/Footer";
 
 export default function Home() {
   return (
-  <main class="bg-slate-950 min-h-screen w-360">
+  <main class="bg-slate-950 w-[1440px] m-auto">
     <Header />
     <Hero />
     <About />

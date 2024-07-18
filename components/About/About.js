@@ -4,8 +4,8 @@ export function About() {
         <div class="bg-gray-700 text-sm p-1 rounded-xl w-[105px] m-auto text-center">About me</div>
         <div class="grid grid-cols-2 flex">
         <div>
-            <div class="bg-gray-700 w-[384px] h-[464px] z-0 mt-14 absolute"></div>
-            <Image src="/PP-pics/Full-pose.jpg" class="ml-10  relative" width={400} height={480}/>
+            <div class="bg-gray-700 w-[384px] h-[464px] z-0 mt-12 absolute"></div>
+            <Image src="/PP-pics/Full-pose.jpg" width={400} height={480}  class="ml-8  relative"/>
         </div>
         <div>
             <div class="text-[30px]">Curious about me? Here you have it:</div>

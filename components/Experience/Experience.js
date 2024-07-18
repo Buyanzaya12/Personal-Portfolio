@@ -25,15 +25,13 @@ export function Experience() {
             <div className="bg-gray-700 text-sm p-1 rounded-xl w-[115px] m-auto text-center">Experience</div>
             <div className="text-center">Here is a quick summary of my most recent experiences:</div>
     
-            {experiences.map((experience, index) => (
-                <div key={index}>
+            {experiences.map((experience) => (
                     <ExperienceCard
-                        title={experience.title}
                         startDate={experience.startDate}
                         endDate={experience.endDate}
                         listItems={experience.listItems}
                     />
-                </div>
+                
             ))}
         </div>
     );
