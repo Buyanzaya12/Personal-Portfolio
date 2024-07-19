@@ -16,7 +16,7 @@ export function Skills() {
         <div className=" flex flex-col justify-around px-28">
             <div className="bg-gray-700 text-sm rounded-xl w-[75px] m-auto text-center">Skills</div>
             <div className="text-center">The skills, tools, and technologies I am really good at:</div>
-            <div className="grid grid-cols-8">
+            <div className="grid grid-cols-8 mobile:grid grid-cols-3">
                 <SkillItem src="/PP-pics/icon-javscript.svg" width={64} height={64} label="JavaScript" />
                 <SkillItem src="/PP-pics/icon-typescript.svg" width={64} height={64} label="TypeScript" />
                 <SkillItem src="/PP-pics/icon-react.svg" width={70} height={64} label="React" />
@@ -25,9 +25,6 @@ export function Skills() {
                 <SkillItem src="/PP-pics/icon-express.svg" width={64} height={64} label="Express.js" />
                 <SkillItem src="/PP-pics/icon-nest.svg" width={66} height={64} label="Nest.js" />
                 <SkillItem src="/PP-pics/icon-socket.svg" width={64} height={64} label="Socket.io" />
-            </div>
-            
-            <div className="grid grid-cols-8">
                 <SkillItem src="/PP-pics/icon-postgresql.svg" width={62} height={64} label="PostgreSQL" />
                 <SkillItem src="/PP-pics/icon-mongodb.svg" width={30} height={64} label="MongoDB" />
                 <SkillItem src="/PP-pics/icon-sass.svg" width={64} height={64} label="Sass/Scss" />
