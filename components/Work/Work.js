@@ -56,7 +56,7 @@ const works = [
 
 export function Work() {
   return (
-    <div className="mx-auto max-w-6xl">
+    <div className="mx-auto">
       <div className="flex justify-center">
         <Tag name="Work" />
       </div>
@@ -73,8 +73,8 @@ export function Work() {
 function WorkCard({ isReverse = false, work }) {
   return (
     <div
-      className={`mb-4 shadow web:flex rounded-xl ${
-        isReverse ? "web:flex-row-reverse" : ""
+      className={`mb-4 shadow rounded-xl ${
+        isReverse ? "mobile: flex-row-reverse" : ""
       }`}
     >
     

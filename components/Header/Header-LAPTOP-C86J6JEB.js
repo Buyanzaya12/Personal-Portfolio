@@ -32,29 +32,34 @@ export function Header() {
     }
     
     return (
-        <div className="flex justify-between gap-4">
+        <div className="flex justify-between align-items gap-4">
+            <div className="text-white flex justify-between p-[16px] font-bold">{"<SS />"}</div>
             <div>
-                
                 {
                     navigations.map((nav) => (
-                        <Link key={nav.link} href={nav.link} className="text-white web: opacity-0 web: w-[0px]">
+                        <Link key={nav.link} href={nav.link} className="text-white flex gap-6">
                             {nav.name}
                         </Link>
                     ))
                 }
             </div>
-            <div className="flex mx-auto align-items justify-between p-[16px]">
-            <div className="text-white text-3xl font-bold">{"<SS />"}</div>
             <button onClick={openMenu}><Image src="/PP-pics/menu-bar.svg" width={24} height={24} /></button>
-            </div>
-           
-            
             <div>
                 <div className={`fixed transition-all inset-0 bg-slate-500/90 ${open ? "block" : "hidden"}`} onClick={closeMenu}></div>
                 <div className={`fixed top-0 bottom-0 transition-all w-64 text-black bg-slate-950 shadow-lg ${open ? "right-0" : "-right-full"}`}>
-                    <div className="text-white flex align-items justify-between p-[16px]">{"<SS />"}
-                    <button onClick={closeMenu}><Image src="/PP-pics/close.svg" className="" width={24} height={24} /></button></div>
+                <div className="yan12
+                text-white flex justify-between p-[16px] font-bold">{"<SS />"}
+                    <button onClick={closeMenu}><Image src="/PP-pics/close.svg" className="justify-end" width={24} height={24} /></button></div>
                 </div>
+                
+                {
+                    navigations.map((nav) => (
+                        <Link key={nav.link} href={nav.link} className="text-white flex gap-6">
+                            {nav.name}
+                        </Link>
+                    ))
+                }
+            
             </div>
         </div>
 

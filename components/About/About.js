@@ -3,9 +3,9 @@ export function About() {
     return <div class="bg-slate-900 px-28">
         <div class="bg-gray-700 text-sm p-1 rounded-xl w-[105px] m-auto text-center">About me</div>
         <div class="grid grid-cols-2 flex">
-        <div>
-            <div class="bg-gray-700 w-[384px] h-[464px] z-0 mt-12 absolute"></div>
-            <Image src="/PP-pics/Full-pose.jpg" width={400} height={480}  class="ml-8  relative"/>
+        <div className="mt-20">
+            <div className="absolute bg-gray-700 w-[304px] h-[344px] border-8 border-transparent"></div>
+            <Image src="/PP-pics/Full-pose.jpg" alt="profile-pic" className="border-[4px] relative  h-[360px] border-slate-900 mx-3 bottom-7" width={280} height={360}/>
         </div>
         <div>
             <div class="text-[30px]">Curious about me? Here you have it:</div>
